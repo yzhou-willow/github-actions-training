@@ -20,5 +20,7 @@ jobs:
       - run: echo ${{ github.event_name }}
       # output the name of the branch taht the repository is on
       - run: echo ${{ github.ref }}
-      # list all files in the repository
-      - run: echo ${{ github.repository }}
+      # list all files in the repository in tree view
+      - run: |
+          echo ${{ github.repository }}
+          tree
