@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: [call-workflow]
     steps:
-      - run: echo 'greeting time: ${{ jobs.call-workflow.outputs.current-time }}'
+      - run: echo 'greeting time: ${{ needs.call-workflow.outputs.current-time }}'
